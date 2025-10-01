@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameTech - Games</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #333;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #ffaa00;
+    }
+
+    nav {
+      background-color: #ffaa00;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ffaa00;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 250px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ffaa00;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #e69900;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GameTech</h1>
+    <p>Jogos Digitais • Consoles • Acessórios</p>
+  </header>
+
+  <nav>
+    <a href="#games">Games</a>
+    <a href="#utilidades">Utilidades</a>
+    <a href="#acessorios">Acessórios</a>
+  </nav>
+
+  <section id="games">
+    <h2>Novos Lançamentos</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://cdn.mos.cms.futurecdn.net/vdgXJvE3EC3WFgVQihSeaR-650-80.jpg.webp" alt="Ark 2">
+        <h3>Ark 2</h3>
+        <p>Lançamento oficial em 24/09/2025.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+      <div class="card">
+        <img src="https://i0.wp.com/dropsdejogos.uai.com.br/wp-content/uploads/sites/10/2025/06/fortnite-scaled.jpg?resize=950%2C534&ssl=1" alt="Fortnite">
+        <h3>Fortnite</h3>
+        <p>Aventura online com temporadas incríveis.</p>
+        <a href="#" class="btn">Jogar Agora</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="utilidades">
+    <h2>Utilidades</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://i.promobit.com.br/static/p/200/132065611117578856447216841725.jpg" alt="Suporte BG500">
+        <h3>Suporte Gaming BG500</h3>
+        <p>Estoques disponíveis com desconto exclusivo.</p>
+        <a href="#" class="btn">Adicionar ao Carrinho</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="acessorios">
+    <h2>Acessórios</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/c9/18/37/c91837e1601b3e2d35518fa84768c58e.jpg" alt="Cadeira Gamer Snake">
+        <h3>Cadeira Gamer Snake</h3>
+        <p>Conforto e desempenho para gamers profissionais.</p>
+        <a href="#" class="btn">Comprar Agora</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 GameTech | Desenvolvido por Lucas De Jesus</p>
+  </footer>
+</body>
+</html>

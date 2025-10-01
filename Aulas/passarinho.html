@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agropet - Passarinho</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .container img {
+      max-width: 400px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* proporção 16:9 */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: darkblue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cachorro.html">Cachorro</a></li>
+      <li><a href="gato.html">Gato</a></li>
+      <li><a href="passarinho.html">Passarinho</a></li>
+      <li><a href="peixe.html">Peixe</a></li>
+      <li><a href="contatos.html">Contatos</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Passarinhos</h1>
+  
+    <img src="https://i.pinimg.com/1200x/2b/dc/0f/2bdc0f9bdac3f3ac55ed7ea426a1f492.jpg" alt="Beija-Flor" />
+    <img src="https://i.pinimg.com/736x/63/5a/d4/635ad4ae10f1b5b7e7862b3339dd1aec.jpg" alt="Papagaio" />
+
+    <h2>Vídeo sobre passarinhos</h2>
+
+    <!-- Vídeo do YouTube incorporado -->
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/6R8C8BSdMds" 
+        title="Birds Of The World 4K"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</body>
+</html>

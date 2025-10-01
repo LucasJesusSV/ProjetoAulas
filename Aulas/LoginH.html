@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Hospital</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+body {
+    background-color: #333;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: orange;
+    margin-bottom: 20px;
+  }
+  
+  .login-box {
+    border: 3px solid orange;   
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;               
+    margin: 60px auto;          
+    background-color: #222;    
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+  }
+  
+  input, select, button {
+    color: white;
+    background-color: #000;
+    border: 2px solid orange;
+    padding: 6px;
+    margin-top: 5px;
+    width: 80%;
+    
+    
+   
+  }
+  #LoginForm input[type="text"],
+#LoginForm input[type="password"],
+#LoginForm select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid orange;  
+    border-radius: 5px;
+    background-color: black;   
+    color: white;  
+}           
+  
+  
+  
+  input::placeholder {
+    color: white;
+    opacity: 1;
+  }
+  
+  button {
+    cursor: pointer;
+    margin-top: 15px;
+    
+  }
+  
+  button:hover {
+    background-color: orange;
+    color: black;
+  }
+  form label {
+    display: inline-block;
+    width: 80px;   
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  form input, form select {
+    display: inline-block;
+    width: 250px;  
+  }
+ </style>
+</head>
+<body class="bodyH">
+  <div class="login-box"> 
+    <form id="LoginForm">
+        <h1 class="h1H">Login Profissional da Saúde</h1>
+        
+        <label for="Matricula">Matrícula:</label>
+        <input type="text" id="Matricula" name="Matricula" placeholder="Digite sua Matrícula" required><br>
+        <label for="Senha">Senha:</label>
+        <input type="password" id="Senha" name="Senha" placeholder="Digite sua Senha" required><br><br>
+
+        <label for="Cargo">Cargo:</label>
+        <select id="Cargo" name="Cargo" required>
+            <option value="" disabled selected>Selecione seu Cargo</option>
+            <option value="Medicina">Medicina</option>
+            <option value="Enfermagem">Enfermagem</option>
+            <option value="Odontologia">Odontologia</option>
+            <option value="Psicologia">Psicologia</option>
+            <option value="Pediatria">Pediatria</option>
+            <option value="Pneumologia">Pneumologia</option>
+            <option value="Outros">Outros</option>
+        </select><br><br>
+
+        <button type="submit">Entrar</button>
+    </form>
+  </div>
+</body>
+</html>

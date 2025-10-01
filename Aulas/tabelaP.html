@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela Periódica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .periodic-table {
+      display: grid;
+      grid-template-columns: repeat(18, 65px);
+      gap: 4px;
+    }
+
+    .element, .vazio {
+      width: 65px;
+      height: 65px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 6px 0;
+    }
+
+    .element span {
+      display: block;
+      font-size: 9px;
+      font-weight: normal;
+    }
+
+    .vazio {
+      background: transparent;
+    }
+
+    /* --- Cores dos grupos --- */
+    .nao-metal     { background: #4CAF50; } 
+    .gas-nobre     { background: #2196F3; } 
+    .metal-alcalino{ background: #FF9800; } 
+    .metal-alcalino-terroso { background: #FF5722; } 
+    .metal-transicao{ background: #9C27B0; }
+    .lantanideo    { background: #795548; } 
+    .actinidio     { background: #607D8B; }
+    .semi-metal    { background: #9E9E9E; } 
+    .outro-metal   { background: #FFC107; } 
+    .halogenio     { background: #E91E63; } 
+  </style>
+</head>
+<body>
+  <div class="periodic-table">
+
+    <!-- Linha 1 -->
+    <div class="element nao-metal">H <span>Hidrogênio</span></div>
+    <div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div>
+    <div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div>
+    <div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div>
+    <div class="element gas-nobre">He <span>Hélio</span></div>
+
+    <!-- Linha 2 -->
+    <div class="element metal-alcalino">Li <span>Lítio</span></div>
+    <div class="element metal-alcalino-terroso">Be <span>Berílio</span></div>
+    <div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div>
+    <div class="element semi-metal">B <span>Boro</span></div>
+    <div class="element nao-metal">C <span>Carbono</span></div>
+    <div class="element nao-metal">N <span>Nitrogênio</span></div>
+    <div class="element nao-metal">O <span>Oxigênio</span></div>
+    <div class="element halogenio">F <span>Flúor</span></div>
+    <div class="element gas-nobre">Ne <span>Neônio</span></div>
+
+    <!-- Linha 3 -->
+    <div class="element metal-alcalino">Na <span>Sódio</span></div>
+    <div class="element metal-alcalino-terroso">Mg <span>Magnésio</span></div>
+    <div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div><div class="vazio"></div>
+    <div class="element outro-metal">Al <span>Alumínio</span></div>
+    <div class="element semi-metal">Si <span>Silício</span></div>
+    <div class="element nao-metal">P <span>Fósforo</span></div>
+    <div class="element nao-metal">S <span>Enxofre</span></div>
+    <div class="element halogenio">Cl <span>Cloro</span></div>
+    <div class="element gas-nobre">Ar <span>Argônio</span></div>
+
+    <!-- Linha 4 -->
+    <div class="element metal-alcalino">K <span>Potássio</span></div>
+    <div class="element metal-alcalino-terroso">Ca <span>Cálcio</span></div>
+    <div class="element metal-transicao">Sc <span>Escândio</span></div>
+    <div class="element metal-transicao">Ti <span>Titânio</span></div>
+    <div class="element metal-transicao">V <span>Vanádio</span></div>
+    <div class="element metal-transicao">Cr <span>Cromo</span></div>
+    <div class="element metal-transicao">Mn <span>Manganês</span></div>
+    <div class="element metal-transicao">Fe <span>Ferro</span></div>
+    <div class="element metal-transicao">Co <span>Cobalto</span></div>
+    <div class="element metal-transicao">Ni <span>Níquel</span></div>
+    <div class="element metal-transicao">Cu <span>Cobre</span></div>
+    <div class="element metal-transicao">Zn <span>Zinco</span></div>
+    <div class="element outro-metal">Ga <span>Gálio</span></div>
+    <div class="element semi-metal">Ge <span>Germânio</span></div>
+    <div class="element semi-metal">As <span>Arsênio</span></div>
+    <div class="element nao-metal">Se <span>Selênio</span></div>
+    <div class="element halogenio">Br <span>Bromo</span></div>
+    <div class="element gas-nobre">Kr <span>Criptônio</span></div>
+
+    <!-- Linha 5 -->
+    <div class="element metal-alcalino">Rb <span>Rubídio</span></div>
+    <div class="element metal-alcalino-terroso">Sr <span>Estrôncio</span></div>
+    <div class="element metal-transicao">Y <span>Ítrio</span></div>
+    <div class="element metal-transicao">Zr <span>Zircônio</span></div>
+    <div class="element metal-transicao">Nb <span>Nióbio</span></div>
+    <div class="element metal-transicao">Mo <span>Molibdênio</span></div>
+    <div class="element metal-transicao">Tc <span>Tecnécio</span></div>
+    <div class="element metal-transicao">Ru <span>Rutênio</span></div>
+    <div class="element metal-transicao">Rh <span>Ródio</span></div>
+    <div class="element metal-transicao">Pd <span>Paládio</span></div>
+    <div class="element metal-transicao">Ag <span>Prata</span></div>
+    <div class="element metal-transicao">Cd <span>Cádmio</span></div>
+    <div class="element outro-metal">In <span>Índio</span></div>
+    <div class="element outro-metal">Sn <span>Estanho</span></div>
+    <div class="element semi-metal">Sb <span>Antimônio</span></div>
+    <div class="element semi-metal">Te <span>Telúrio</span></div>
+    <div class="element halogenio">I <span>Iodo</span></div>
+    <div class="element gas-nobre">Xe <span>Xenônio</span></div>
+
+    <!-- Linha 6 -->
+    <div class="element metal-alcalino">Cs <span>Césio</span></div>
+    <div class="element metal-alcalino-terroso">Ba <span>Bário</span></div>
+    <div class="element lantanideo">La <span>Lantânio</span></div>
+    <div class="element lantanideo">Ce <span>Cério</span></div>
+    <div class="element lantanideo">Pr <span>Praseodímio</span></div>
+    <div class="element lantanideo">Nd <span>Neodímio</span></div>
+    <div class="element lantanideo">Pm <span>Promécio</span></div>
+    <div class="element lantanideo">Sm <span>Samário</span></div>
+    <div class="element lantanideo">Eu <span>Európio</span></div>
+    <div class="element lantanideo">Gd <span>Gadolínio</span></div>
+    <div class="element lantanideo">Tb <span>Térbio</span></div>
+    <div class="element lantanideo">Dy <span>Disprósio</span></div>
+    <div class="element lantanideo">Ho <span>Hólmio</span></div>
+    <div class="element lantanideo">Er <span>Érbio</span></div>
+    <div class="element lantanideo">Tm <span>Túlio</span></div>
+    <div class="element lantanideo">Yb <span>Itérbio</span></div>
+    <div class="element lantanideo">Lu <span>Lutécio</span></div>
+    <div class="element gas-nobre">Rn <span>Radônio</span></div>
+
+    <!-- Linha 7 -->
+    <div class="element metal-alcalino">Fr <span>Frâncio</span></div>
+    <div class="element metal-alcalino-terroso">Ra <span>Rádio</span></div>
+    <div class="element actinidio">Ac <span>Actínio</span></div>
+    <div class="element actinidio">Th <span>Tório</span></div>
+    <div class="element actinidio">Pa <span>Protactínio</span></div>
+    <div class="element actinidio">U <span>Urânio</span></div>
+    <div class="element actinidio">Np <span>Neptúnio</span></div>
+    <div class="element actinidio">Pu <span>Plutônio</span></div>
+    <div class="element actinidio">Am <span>Amerício</span></div>
+    <div class="element actinidio">Cm <span>Cúrio</span></div>
+    <div class="element actinidio">Bk <span>Berquélio</span></div>
+    <div class="element actinidio">Cf <span>Califórnio</span></div>
+    <div class="element actinidio">Es <span>Einstênio</span></div>
+    <div class="element actinidio">Fm <span>Férmio</span></div>
+    <div class="element actinidio">Md <span>Mendelévio</span></div>
+    <div class="element actinidio">No <span>Nobélio</span></div>
+    <div class="element actinidio">Lr <span>Laurêncio</span></div>
+    <div class="element gas-nobre">Og <span>Oganessônio</span></div>
+
+  </div>
+</body>
+</html>

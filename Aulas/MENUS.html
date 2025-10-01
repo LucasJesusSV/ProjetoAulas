@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>AutoCar Veículos</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="formulario">
+
+  <h1 class="formulario">AutoCar Veículos</h1>
+
+
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="estoque.html">Estoque</a></li>
+      <li><a href="financiamento.html">Financiamento</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="sobre.html">Sobre Nós</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="descricao">
+    <h2>Bem-vindo à AutoCar Veículos</h2>
+    <p>
+      Aqui você encontra os melhores carros novos e seminovos com garantia de procedência.  
+      Trabalhamos com financiamento facilitado, ótimas condições de pagamento e atendimento personalizado.  
+      Nossa missão é colocar você no carro dos seus sonhos com segurança e confiança.
+    </p>
+  </section>
+
+  
+  <section class="imagem">
+    <img src="https://cdn.pixabay.com/photo/2015/01/19/13/51/car-604019_1280.jpg" alt="Carro esportivo" width="600">
+  </section>
+
+  
+  <footer class="rodape">
+    <p>Data de acesso: <span id="data"></span></p>
+  </footer>
+
+  <script>
+    // Exibe a data atual automaticamente
+    const data = new Date();
+    document.getElementById("data").textContent = 
+      data.toLocaleDateString("pt-BR", { day: '2-digit', month: '2-digit', year: 'numeric' });
+  </script>
+
+</body>
+</html>

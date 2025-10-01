@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agropet - Peixe</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .container img {
+      max-width: 400px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* proporção 16:9 */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: darkblue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cachorro.html">Cachorro</a></li>
+      <li><a href="gato.html">Gato</a></li>
+      <li><a href="passarinho.html">Passarinho</a></li>
+      <li><a href="peixe.html">Peixe</a></li>
+      <li><a href="contatos.html">Contatos</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Peixes</h1>
+    <img src="https://i.pinimg.com/736x/f2/fa/7e/f2fa7ebb5931d76af818a45b37c97afc.jpg" alt="Peixe bonito">
+    <img src="https://i.pinimg.com/736x/e7/c2/d7/e7c2d7e61323f3cb1c12b2ffc6f44711.jpg" alt="Peixe colorido">
+
+    <h2>Vídeo sobre peixes</h2>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/6QSUTjsHU6s"
+        title="Peixes relaxantes em recife de corais"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</body>
+</html>
