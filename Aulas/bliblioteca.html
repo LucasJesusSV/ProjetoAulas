@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital - Conhecimento Sem Limites</title>
+    <!-- Inclui o CSS do Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Ícones Bootstrap (opcional, mas bom para usabilidade) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* Estilos personalizados para melhorar a estética e usabilidade */
+        body {
+            /* Adiciona padding superior para evitar que o conteúdo fique atrás da navbar fixa */
+            padding-top: 56px; 
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f9fc; /* Fundo suave */
+        }
+        .section-padding {
+            padding: 60px 0;
+        }
+        .section-infantis { background-color: #fff3cd; } /* Amarelo claro para Infantis */
+        .section-didaticos { background-color: #d1ecf1; } /* Azul claro para Didáticos */
+        .section-cursos { background-color: #f8d7da; } /* Vermelho claro para Cursos */
+        .section-matematica { background-color: #d4edda; } /* Verde claro para Matemática */
+        .section-fisica { background-color: #dee2e6; } /* Cinza claro para Física */
+        .card-book {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+        }
+        .card-book:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+        .carousel-caption h5, .carousel-caption p {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<!-- Habilita o Scrollspy no corpo do documento -->
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" tabindex="0">
+
+    <!-- 1. Barra de Navegação (Navbar) com Scrollspy -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home"><i class="bi bi-book me-2"></i>BiblioTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Links que ativam o Scrollspy -->
+                    <li class="nav-item"><a class="nav-link" href="#infantis">Infantis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#didaticos">Didáticos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#matematica">Matemática</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#fisica">Física</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Carrossel (Hero Section) -->
+    <header id="home">
+        <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#bookCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#bookCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#bookCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- Imagem placeholder com tema abstrato de leitura -->
+                    <img src="https://placehold.co/1200x400/343a40/ffffff?text=Novidades+na+Biblioteca" class="d-block w-100" alt="Livro aberto e flutuando">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-5 fw-bold">Bem-vindo(a) à BiblioTech</h5>
+                        <p class="lead">Milhares de títulos digitais ao seu alcance.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/1200x400/17a2b8/ffffff?text=Leia+a+qualquer+hora" class="d-block w-100" alt="Pessoa lendo em um tablet">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-5 fw-bold">Aprenda no seu Ritmo</h5>
+                        <p class="lead">Acesso instantâneo a todos os gêneros e áreas do saber.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/1200x400/28a745/ffffff?text=Estude+e+Cresca" class="d-block w-100" alt="Ilustração de gráficos de conhecimento">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-5 fw-bold">Conteúdo Acadêmico de Ponta</h5>
+                        <p class="lead">Recursos didáticos e de curso atualizados para o seu sucesso.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 3. Seções de Conteúdo (Scrollspy Targets) -->
+    
+    <!-- Seção 1: Livros Infantis -->
+    <section id="infantis" class="section-padding section-infantis">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-light text-primary"><i class="bi bi-balloon-heart-fill"></i> Livros Infantis</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                         <img src="https://www.baixelivros.com.br/media/2020/04/galinha-sabia-ler.jpg" class="card-img-top" alt="">
+                        <img src="https://archivepublicdomain.com/files/2025/11/a_galinha_que_sabia_ler.pdf" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">A Galinha que Sabia Ler </h5>
+                            <p class="card-text"><small class="text-muted">Autor(a): Sandra Aymone | Faixa Etária: 4-8 anos</small></p>
+                            <a href="#" class="btn btn-sm btn-primary">Ler Agora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://www.baixelivros.com.br/media/2020/05/quatro-estacoes.jpg" class="card-img-top" alt="">
+                        <img src="https://5ca0e999-de9a-47e0-9b77-7e3eeab0592c.usrfiles.com/ugd/5ca0e9_3b02921043b549a08fd0899aab004b7f.pdf" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">As Quatro Estações para Crianças</h5>
+                            <p class="card-text"><small class="text-muted">Autor(a): Maynara Abreu | Faixa Etária: 6-10 anos</small></p>
+                            <a href="#" class="btn btn-sm btn-primary">Ler Agora</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1EHyYKP3tHedOu8otNwBzFk7pXxnpgmYlhA&s" class="card-img-top" alt="">
+                        <img src="https://5ca0e999-de9a-47e0-9b77-7e3eeab0592c.usrfiles.com/ugd/5ca0e9_f17489977d524bdf9a3e2beb1362836c.pdf" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">As Aventuras do Jovem Pigmeu</h5>
+                            <p class="card-text"><small class="text-muted">Autor(a): Maynara Abreu | Faixa Etária: 8+ anos</small></p>
+                            <a href="#" class="btn btn-sm btn-primary">Ler Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 2: Livros Didáticos -->
+    <section id="didaticos" class="section-padding section-didaticos">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-light text-secondary"><i class="bi bi-journal-bookmark-fill"></i> Livros Didáticos</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPNffmcdGMqoMxflJborY9e4JFKuIHez2H2g&s" class="card-img-top" alt="Capa do livro História e Geografia">
+                        <img src="https://archivepublicdomain.com/files/2025/03/Historia-das-Americas-%E2%80%93-Luciane-Chaves.pdf" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">História das Américas</h5>
+                            <p class="card-text"><small class="text-muted">Nível: Ensino Médio | Edição: 2016</small></p>
+                            <a href="#" class="btn btn-sm btn-info text-white">Visualizar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2bbFKVarfY9bKwTK2jBXROA_vBaXm-fONNw&s" class="card-img-top" alt="">
+                        <img src="https://archivepublicdomain.com/files/2025/10/A-Morte-do-Palhaco-Raul-Brandao.pdf" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-info">A Morte do Palhaço - Literatura Brasileira</h5>
+                            <p class="card-text"><small class="text-muted">Nível: Ensino Médio | Edição: 1926</small></p>
+                            <a href="#" class="btn btn-sm btn-info text-white">Visualizar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIVY0R7zionbI6sXJf1UwI1LdIq4ry2yCUfQ&s" class="card-img-top" alt="">
+                        <a href="https://archivepublicdomain.com/files/2025/03/biologia-ensino-medio.pdf"></a>
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Biologia </h5>
+                            <p class="card-text"><small class="text-muted">Nível: Ensino Médio | Edição: 2023</small></p>
+                            <a href="#" class="btn btn-sm btn-info text-white">Visualizar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 3: Livros de Cursos -->
+    <section id="cursos" class="section-padding section-cursos">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-light text-danger"><i class="bi bi-laptop-fill"></i> Livros de Cursos</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://www.baixelivros.com.br/media/2022/05/java-basico.jpg" class="card-img-top" alt="">
+                        <img src="https://canal.cecierj.edu.br/012016/d7d8367338445d5a49b4d5a49f6ad2b9.pdf" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Programaçõa POO</h5>
+                            <p class="card-text"><small class="text-muted">Foco: Int Java Básico e Orientação a Objeto | Nº de Páginas: 242 Páginas</small></p>
+                            <a href="#" class="btn btn-sm btn-warning text-dark">Acessar Curso</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGpdxArKroykza8g9ObhHB6GvfzVx2AWlIlA&s" class="card-img-top" alt="">
+                        <img src="https://domainpublic.wordpress.com/wp-content/uploads/2024/01/livro_informatica_avancada_compressed.pdf" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Informática Avançada</h5>
+                            <p class="card-text"><small class="text-muted">Foco: Informática Avançada| Nº de Páginas: 264</small></p>
+                            <a href="#" class="btn btn-sm btn-warning text-dark">Acessar Curso</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://www.baixelivros.com.br/media/2020/06/gestao-financeira.jpg" class="card-img-top" alt="Capa do livro Marketing Digital">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Gestão Financeira</h5>
+                            <p class="card-text"><small class="text-muted"> Foco: Prática de instrumentos da gestão financeira | Nº de Páginas: 051</small></p>
+                            <a href="#" class="btn btn-sm btn-warning text-dark">Acessar Curso</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 4: Matemática -->
+    <section id="matematica" class="section-padding section-matematica">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-light text-success"><i class="bi bi-calculator-fill"></i> Matemática</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSc0hWjbnqpqHqwGBfxwX-3-xHTa3iwR_zcQ&s" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Matemática Básica – Cálculo, Equações e Álgebra</h5>
+                            <p class="card-text"><small class="text-muted">Foco: Cálculo, Equações e Álgebra| Nível: Básico</small></p>
+                            <a href="#" class="btn btn-sm btn-success">Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYJxizbNQ3PyYLyUV4t8mqDylfjOTdv7oGsw&s" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Educação Financeira</h5>
+                            <p class="card-text"><small class="text-muted">Foco:Educação Financeira | Nível: Ensino Médio</small></p>
+                            <a href="#" class="btn btn-sm btn-success">Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRewQqmQLHlFDZifgCRiFIRwlPSOoK6-DSlwQ&s" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Construções Geométricas</h5>
+                            <p class="card-text"><small class="text-muted">Foco: Geometria | Nível: Médio/Superior</small></p>
+                            <a href="#" class="btn btn-sm btn-success">Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 5: Física -->
+    <section id="fisica" class="section-padding section-fisica">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-light text-dark"><i class="bi bi-cpu-fill"></i> Física</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://image.isu.pub/140307175430-12680ebeef02a3a65ae9c520901ea4cf/jpg/page_1_thumb_large.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-secondary">Mecânica Clássica</h5>
+                            <p class="card-text"><small class="text-muted">Leis de Newton e Energia | Nível: Médio/Universitário</small></p>
+                            <a href="#" class="btn btn-sm btn-dark">Abrir Livro</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQny4Ogi9I8DV9M3K97crioWgyX3cT4EfyezQ&s" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-secondary">Eletromagnetismo</h5>
+                            <p class="card-text"><small class="text-muted">Cargas e Campos | Nível: Médio/Universitário</small></p>
+                            <a href="#" class="btn btn-sm btn-dark">Abrir Livro</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card card-book h-100 shadow-sm text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG9B4tchQHtszcYnWsh6-1XAjInzA7X7jFfw&s" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-secondary">Física Moderna</h5>
+                            <p class="card-text"><small class="text-muted">Relatividade e Quantum | Nível: Médio/Avançado</small></p>
+                            <a href="#" class="btn btn-sm btn-dark">Abrir Livro</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 BiblioTech Digital. Todos os direitos reservados. | Desenvolvido com Bootstrap.</p>
+        </div>
+    </footer>
+
+    <!-- Inclui o JS do Bootstrap Bundle (Popper incluído) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Script para garantir que o Scrollspy funciona (já é ativado pelo data-bs-spy="scroll" no body, mas é bom ter uma confirmação visual em JS) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Este script é apenas para garantir que o carrossel inicie automaticamente, se necessário
+            var myCarousel = document.querySelector('#bookCarousel');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 5000 // 5 segundos
+            });
+
+            // O Scrollspy é ativado via atributos de dados (data-bs-spy no body).
+            // Nenhuma função JS manual é estritamente necessária aqui, mas é onde você adicionaria
+            // lógica extra baseada em rolagem ou autenticação.
+
+            console.log("Landing page carregada. Scrollspy e Carrossel ativos!");
+        });
+    </script>
+</body>
+</html>
